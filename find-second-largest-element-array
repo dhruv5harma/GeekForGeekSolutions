@@ -1,0 +1,18 @@
+class Solution {
+    int print2largest(int arr[], int n) {
+        int firstLargestNumber=Integer.MIN_VALUE;
+        int secondLargestNumber=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            if(arr[i]>firstLargestNumber){
+                secondLargestNumber=firstLargestNumber;
+                firstLargestNumber=arr[i];
+            }else if(arr[i]>secondLargestNumber && arr[i]!=firstLargestNumber){
+                secondLargestNumber=arr[i];
+            }
+        }
+        if(secondLargestNumber==Integer.MIN_VALUE){
+        return -1;
+        }else
+        return secondLargestNumber;
+    }
+}
