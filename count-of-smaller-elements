@@ -1,0 +1,13 @@
+class Compute {
+    
+    public long countOfElements(long arr[], long n, long x)
+    {
+        long counter=0;
+        for(long i:arr){
+            if(i<=x){
+                counter++;
+            }
+        }
+        return counter;
+    }
+}
